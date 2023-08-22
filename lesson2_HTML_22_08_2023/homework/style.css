@@ -1,0 +1,133 @@
+body {
+  margin: 0%;
+}
+
+.container-wallpaper {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.me {
+  width: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 60%;
+  left: 44%;
+}
+
+.wallpaper {
+  width: 100%;
+}
+
+.greetings {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h1 {
+  color: rgb(164, 235, 243);
+}
+
+h2 {
+  font-family: "Pangolin", cursive;
+  color: rgb(143, 225, 235);
+  font-size: 2rem;
+}
+
+h6 {
+  font-weight: 100;
+  /* font-family: "Pangolin", cursive; */
+  color: #1b2430;
+  font-size: 1.5rem;
+}
+
+.dotted {
+  margin: 100px auto;
+  width: 100px;
+  border: none;
+  border-top: 5px dotted rgb(204, 242, 244);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.tile-image {
+  width: 300px;
+  margin-right: 50px;
+}
+
+.card-text {
+  font-family: "Pangolin", cursive;
+  color: #374259;
+}
+
+.card-content {
+  flex: 0.5;
+  /* font-size: 1.2em; */
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(121, 224, 238);
+  padding: 40px;
+}
+
+.footer-links {
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #79e0ee;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-bottom: 50px;
+}
+
+.text {
+  color: rgb(27, 206, 226);
+  font-weight: 900;
+}
+
+.contact-button:hover {
+  background-color: #2980b9;
+}
+
+.greetings-text {
+  font-size: 1.5rem;
+}
+
+.footer-content > p {
+  color: white;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #333;
+  font-family: "Pangolin", cursive;
+  font-size: large;
+}
