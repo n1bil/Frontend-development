@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Sign-Up</h1>
+            </div>
+            <div class="body">
+                <form action="./registration">
+                    <div>
+                        <label class="above" for="username">Username:</label>
+                        <input
+                            class="field"
+                            type="text"
+                            id="username"
+                            placeholder="Enter your username"
+                            required
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <label class="above" for="password">Password:</label>
+                        <input
+                        class="field"
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            minlength="8"
+                            required
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <label class="above" for="email">Email:</label>
+                        <input
+                            class="field"
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <label for="male">Male</label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                            id="male"
+                        />
+                        <label for="female">Female</label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="female"
+                            id="female"
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <h2>What languages do you know?</h2>
+                        <label>English</label>
+                        <input type="checkbox" name="english" value="english" />
+                        <label>German</label>
+                        <input type="checkbox" name="german" value="german" />
+                        <label>Spanish</label>
+                        <input type="checkbox" name="spanish" value="spanish" />
+                    </div>
+                    <br />
+                    <div>
+                        <label class="above" for="position">Your position:</label>
+                        <select name="position" id="position" class="field-position">
+                            <option value="Java">Java developer</option>
+                            <option value="JavaScript">Frontend developer</option>
+                            <option value="Python">Python developer</option>
+                            <option value="Swift">Swift developer</option>
+                            <option value="Kotlin">Kotlin developer</option>
+                            <option value="C#">C# developer</option>
+                            <option value="C++">C++ developer</option>
+                            <option value="PHP">PHP developer</option>
+                        </select>
+                    </div>
+                    <br />
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

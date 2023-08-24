@@ -1,0 +1,59 @@
+* {
+    font-size: 1.2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 0px;
+}
+
+body {
+    margin: 0;
+    background-image: url("./painting.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    border: 2px solid #D8D9DA;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    width: 400px;
+    margin: 80px auto;
+    text-align: center;
+    font-family: "Concert One", cursive;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 2% 8%;
+    border-radius: 10%;
+    border: 0;
+    background-color: green;
+    color: white;
+}
+
+.above {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.field {
+    width: 95%;
+    padding: 2%;
+}
+
+.field-position {
+    width: 100%;
+    padding: 2%;
+}
+
+h2 {
+    margin-top: 0%;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="class1">Tax class 1</label>
+        <input type="radio" name="tax-class" id="class1" value="1">
+        <label for="class2">Tax class 2</label>
+        <input type="radio" name="tax-class" id="class2" value="2" checked>
+
+        <label for="family-1">One child</label>
+        <input type="radio" name="family-members" value="1" id="family-1">
+        <label for="family-2">Two child</label>
+        <input type="radio" name="family-members" value="2" id="family-2">
+        <label for="family-3">Three child</label>
+        <input type="radio" name="family-members" value="3" id="family-3" required>
+
+        <select name="pet" id="pet-input" required>
+            <option label selected>choose a pet</option>
+            <!-- <option value="" disabled selected>pet</option> -->
+            <option value="cat">cat</option>
+            <option value="dog">dog</option>
+        </select>
+
+        <input type="text" name="first-name" placeholder="First name" required>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
