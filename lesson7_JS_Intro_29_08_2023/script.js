@@ -56,7 +56,6 @@ const box = document.getElementById('box');
 const time = setInterval(move, 20);
 var snap = false;
 let position = 0;
-let maxPosition = 150;
 function move() {
     if (snap == false && position <= 150) {
         position++;
