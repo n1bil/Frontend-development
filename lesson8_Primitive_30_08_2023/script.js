@@ -106,7 +106,7 @@ function greeting(nickname1 = 'Anonymous') {
 
 
 // Homework
-
+//1
 res = sumDigits(1234);
 console.log(`res = ${res}`);    // expect to see 10
 
@@ -123,6 +123,7 @@ function sumDigits(x) {
     return sum;
 }
 
+//2
 function luckyNumber(x) {
     let firstSum = 0;
     let secondSum = 0;
@@ -139,6 +140,7 @@ function luckyNumber(x) {
     }
 }
 
+//3
 function banana() {
     let a = 'a';
     let b = 'b';
