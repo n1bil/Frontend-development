@@ -115,29 +115,42 @@ console.log(res ? 'Lucky' : 'Unlucky');
 
 function sumDigits(x) {
     let sum = 0;
-    let digitsArray = x.toString().split('').map(Number);
+    // first way
+    // let digitsArray = x.toString().split('').map(Number);
     
-    for (let i = 0; i < digitsArray.length; i++) {
-        sum += digitsArray[i]; 
+    // for (let i = 0; i < digitsArray.length; i++) {
+    //     sum += digitsArray[i]; 
+    // }
+
+    // second way
+    while (x) {
+        sum += x % 10;          // получили последнюю цифру - 4
+        x = (x - x % 10) / 10;  // укоротили число. Было 1234 - стало 123
     }
     return sum;
 }
 
 //2
 function luckyNumber(x) {
-    let firstSum = 0;
-    let secondSum = 0;
-    let threeNumbers = x.toString().substring(0, 3).split('').map(Number);
-    let anotherThreeNumbers = x.toString().substring(3, 6).split('').map(Number);
+    // let firstSum = 0;
+    // let secondSum = 0;
+    // let threeNumbers = x.toString().substring(0, 3).split('').map(Number);
+    // let anotherThreeNumbers = x.toString().substring(3, 6).split('').map(Number);
     
-    for (let i = 0; i < threeNumbers.length, i < anotherThreeNumbers.length; i++) {
-        firstSum += threeNumbers[i];
-        secondSum += anotherThreeNumbers[i];
-    }
+    // for (let i = 0; i < threeNumbers.length, i < anotherThreeNumbers.length; i++) {
+    //     firstSum += threeNumbers[i];
+    //     secondSum += anotherThreeNumbers[i];
+    // }
     
-    if (firstSum === secondSum) {
-        return true;
-    }
+    // if (firstSum === secondSum) {
+    //     return true;
+    // }
+
+    // second way
+    let secondHalf = x % 1000;
+    let firstHalf = (x - secondHalf) / 1000;
+
+    return sumDigits(firstHalf) === sumDigits(secondHalf);
 }
 
 //3
