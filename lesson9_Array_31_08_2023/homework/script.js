@@ -2,10 +2,17 @@ let library = [];
 let inputDate = prompt('Enter book data separate by ";"'); // example: 1;Gold Fish; A.S. Pushkin;1820
 
 while (inputDate) {
-    let someDate = inputDate.split(";");
-    if (!findBook(library, someDate[0])) {
-        let book = new Book(someDate[0], someDate[1], someDate[2], someDate[3]);
-        library.push(book);
+    let someDate = inputDate.split(";");    // ['', '', '', '']
+
+    const [isbn, title, author, year] = inputDate.split(";");
+
+    // if (!findBook(library, someDate[0])) {
+    //     let book = new Book(someDate[0], someDate[1], someDate[2], someDate[3]);
+    //     library.push(book);
+    // }
+
+    if (someDate.length === 4 && isbn && title && author && year && !findBook(library, isbn)) {
+        library.push(new Book(isbn, title, author, year));
     }
     
     inputDate = prompt('Enter book data separate by ";"');
@@ -25,6 +32,7 @@ function findBook(library, isbn) {
             return library[i];
         }
     }
+    return null;
 }
 
 function Book(isbn, title, author, year) {
