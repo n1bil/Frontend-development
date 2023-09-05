@@ -10,30 +10,58 @@ with the following properties:
     6. checkBalance() function
 */
 
+// first way
+// const bankAccount = {
+//     accountNumber: 123456789 ,
+//     name: "Frank",
+//     balance: 0,
+//     deposit: function (add) {
+//         this.balance += add;
+//         return add;
+//     },
+//     withdraw: function (subtract) {
+//         if (this.balance >= subtract) {
+//             this.balance -= subtract;
+//             return subtract;
+//         }
+//     },
+//     checkBalance: function () {
+//         console.log(`Current account: $${this.balance}`);
+//     },
+// };
+
 const bankAccount = {
     accountNumber: 123456789 ,
     name: "Frank",
-    balance: 0,
+    balance: 1000,
     deposit: function (add) {
-        this.balance = this.balance + add;
-        return add;
+        add > 60000
+            ? console.log('proof of legality of income is required')
+            : this.balance += add;
     },
-    withdraw: function (subtract) {
-        if (this.balance >= subtract) {
-            this.balance -= subtract;
-            return subtract;
-        }
+    withdraw(subtract) {
+        this.balance >= subtract && subtract > 0
+            ? this.balance -= subtract
+            : console.log('Not enough money on your balance or you entered negative number');
     },
-    checkBalance: function () {
-        console.log(`Current account: $${this.balance}`);
-    },
+    checkBalance: () => {
+        console.log(`Current your balance equal: ${bankAccount.balance}`);
+    }
 };
 
 // mini test
+// bankAccount.checkBalance();
+// console.log(`${bankAccount.name} withdrew ${bankAccount.withdraw(200)}`);
+// bankAccount.checkBalance();
+// console.log(`${bankAccount.name} deposited ${bankAccount.deposit(300)}`);
+// bankAccount.checkBalance();
+// console.log(`${bankAccount.name} withdrew ${bankAccount.withdraw(250)}`);
+// bankAccount.checkBalance();
+
 bankAccount.checkBalance();
-console.log(`${bankAccount.name} withdrew ${bankAccount.withdraw(200)}`);
+bankAccount.deposit(500);
 bankAccount.checkBalance();
-console.log(`${bankAccount.name} deposited ${bankAccount.deposit(300)}`);
+bankAccount.withdraw(700);
 bankAccount.checkBalance();
-console.log(`${bankAccount.name} withdrew ${bankAccount.withdraw(250)}`);
+bankAccount.withdraw(1000);
 bankAccount.checkBalance();
