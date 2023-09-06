@@ -14,7 +14,7 @@ function addTask() {
     const taskName = task.value.trim();
     if (taskName) {
         const li = document.createElement('li');
-        li.innerHTML = `<span>${taskName}</span><button id="deleteButton">Delete</button>`;
+        li.innerHTML = `<span>${taskName}</span><button>Delete</button>`;
         taskListUl.appendChild(li);
     }
     task.value = '';
