@@ -30,3 +30,33 @@ weatherButton.addEventListener("click", () => {
             });
     }
 });
+
+/*
+fetch(apiUrl)
+    .then((res) => res.json())
+    .then(({
+            base,
+            name,
+            coord: { lon, lat },
+            main: { temp, feels_like },
+            sys: { country },
+            weather: {
+                0: { main, description },
+            },
+        }) =>
+            console.log(
+                base,
+                name,
+                lon,
+                lat,
+                (temp - 273.15).toFixed(1),
+                (feels_like - 273.15).toFixed(1),
+                country,
+                description,
+                main
+            )
+    )
+
+    .catch((err) => console.log(err))
+    .finally(console.log("Request is finished!"));
+*/
