@@ -1,0 +1,66 @@
+#taskList {
+    width: fit-content;
+    margin: 20px auto 0;
+}
+
+.task {
+    padding: 30px 30px 30px 20px;
+    font-size: large;
+}
+
+.task > li {
+    list-style-type: none;
+}
+
+.task > li > span {
+    padding: 0 10px 0 0;
+}
+
+.task > li > button {
+    margin: 0 0 0 10px;
+}
+
+.container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+
+  .newInputClass {
+    padding: 9px;
+    font-size: 16px;
+    width: 300px;
+  }
+  
+  #addTask {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+  }
+  
+  #addTask:hover {
+    background-color: #0056b3;
+  }
+
+  .removeButton {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 3px 6px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .removeButton:hover {
+    background-color: rgb(107, 128, 76);
+  }
