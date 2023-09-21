@@ -9,7 +9,7 @@ interface IJson {
 }
 
 const Users: FC = (): JSX.Element => {
-    const [json, setJson] = useState<IJson[] | null>([]);
+    const [json, setJson] = useState<IJson[] | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
