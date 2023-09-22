@@ -54,7 +54,6 @@ const ToDo: React.FC = (): JSX.Element => {
         updatedTask.splice(index, 1);
         
         setTasks(updatedTask);
-        
     }
 
 
