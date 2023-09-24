@@ -1,0 +1,11 @@
+.container {
+    background-color: lightcyan;
+}
+
+.heading {
+    color: lightgray;
+}
+
+.description {
+    font-weight: bold;
+}
