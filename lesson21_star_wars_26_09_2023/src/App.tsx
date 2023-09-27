@@ -1,17 +1,30 @@
-import React from 'react';
-import './App.css';
-import Header from './components/header/Header';
-import Main from './components/main/Main';
-import Footer from './components/footer/Footer';
+import React, { createContext, useState } from "react";
+import "./App.css";
+import Header from "./components/header/Header";
+import HomeworkMain from "./components/main/HomeworkMain";
+import HomeworkFooter from "./components/footer/HomeworkFooter";
+import { navItems } from "./utils";
+
+export const PageContext = createContext((currentPage: string) => {});
 
 function App() {
-  return (
-    <>
-      <Header/>
-      <Main/>
-      <Footer/>
-    </>
-  );
+    const [currentPage, setCurrentPage] = useState<string>(navItems[0]);
+
+    console.log(currentPage);
+
+    const changePage = (currentPage: string) => {
+        setCurrentPage(currentPage);
+    };
+
+    return (
+        <>
+            <PageContext.Provider value={changePage}>
+                <Header changePage={changePage} />
+                <HomeworkMain currentPage={currentPage} />
+                <HomeworkFooter />
+            </PageContext.Provider>
+        </>
+    );
 }
 
 export default App;

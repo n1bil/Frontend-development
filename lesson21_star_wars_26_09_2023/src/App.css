@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poller One', cursive;
-    background-image: url('../public/images/sky.jpg');
+    background-image: url('./images/sky.jpg');
     color: #eedb00;
     /* background fixation  */
     background-attachment: fixed;
@@ -83,5 +83,11 @@ img {
 }
 
 .farGalaxy {
-    font-size: 2em;
+    font-size: 1.5em;
+}
+
+footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
 }

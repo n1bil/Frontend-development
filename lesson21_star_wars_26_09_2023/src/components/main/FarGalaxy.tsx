@@ -1,6 +1,6 @@
 import React from "react";
 
-const Paragraph = () => {
+const FarGalaxy: React.FC = (): JSX.Element => {
     return (
         <p className="farGalaxy">
             Long ago in a galaxy far far away... the Old Republic fell. On its
@@ -16,4 +16,4 @@ const Paragraph = () => {
     );
 };
 
-export default Paragraph;
+export default FarGalaxy;
