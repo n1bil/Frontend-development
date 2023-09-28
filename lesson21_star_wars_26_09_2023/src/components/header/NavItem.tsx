@@ -4,7 +4,7 @@ import { PageContext } from '../../App'
 const NavItem: FC<{ itemTitle: string, changePage: (currentPage: string) => void }> = ( { itemTitle, changePage } ) => {
 
   const myFunction = useContext(PageContext);
-  console.log(myFunction);
+  // console.log(myFunction);
   
 
   return (

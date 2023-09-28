@@ -1,5 +1,5 @@
 import React from "react";
-import { friends } from "../../utils";
+import { friends } from "../../../utils";
 import Friend from "./Friend";
 
 const DreamTeam: React.FC = (): JSX.Element => {
