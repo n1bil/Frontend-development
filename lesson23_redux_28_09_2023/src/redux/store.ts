@@ -1,11 +1,14 @@
 import { combineReducers } from 'redux';
 import { createStore } from 'redux';
-import counterReducer from './counterReducer';
-import productReducer from './productReducer';
+import counterReducer from './reducers/counterReducer';
+import sandwichReducer from './reducers/sandwichReducer';
+import booksReducer from './reducers/booksReducer';
+
 
 const store = createStore(combineReducers({
     counter: counterReducer,
-    product: productReducer
+    sandwich: sandwichReducer,
+    books: booksReducer
 }));
 
 export default store;

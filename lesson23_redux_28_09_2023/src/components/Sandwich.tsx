@@ -4,27 +4,33 @@ import { RootState } from "../redux/store";
 
 const Product: React.FC = (): JSX.Element => {
 
-    const product = useSelector((state: RootState) => state.product.value);
+    const ingredients = useSelector((state: RootState) => state.sandwich.ingredients);
     const dispatch = useDispatch();
 
-    const addBread = (): void => {
-        dispatch({ type: 'addBread', payload: 'bread ' })
+    const handleAddBread = (): void => {
+        dispatch({ type: 'sandwich/addIngredient', payload: 'bread' });
     };
 
-    const addCheese = (): void => {
-        dispatch({ type: 'addCheese', payload: 'cheese '})
+    const handleAddCheese = (): void => {
+        dispatch({ type: 'sandwich/addIngredient', payload: 'cheese' });
     };
 
-    const addHam = (): void => {
-        dispatch({ type: 'addHam', payload: 'ham ' })
+    const handleAddHam = (): void => {
+        dispatch({ type: 'sandwich/addIngredient', payload: 'ham' });
+    };
+
+    const handleClear = (): void => {
+        dispatch({ type: 'sandwich/clear' })
     };
 
     return (
         <div>
-            <button onClick={addBread}>addBread</button>
-            <button onClick={addCheese}>addCheese</button>
-            <button onClick={addHam}>addHam</button>
-            <div>Sandwich: {product}</div>
+            <h1>Choose some ingredients: </h1>
+            <p>Sandwich: {ingredients}</p>
+            <button onClick={handleAddBread}>addBread</button>
+            <button onClick={handleAddCheese}>addCheese</button>
+            <button onClick={handleAddHam}>addHam</button>
+            <button onClick={handleClear}>Clear all</button>
         </div>
     );
 };

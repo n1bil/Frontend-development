@@ -8,7 +8,7 @@ const Counter: React.FC = (): JSX.Element => {
     const dispatch = useDispatch();
 
     const handleMinus = ():void => {
-        dispatch({ type: 'counter/minus', payload: 1 })
+        dispatch({ type: 'counter/minus' })
     }
 
     const handlePlus = ():void => {
