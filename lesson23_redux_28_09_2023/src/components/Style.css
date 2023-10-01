@@ -1,0 +1,39 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+/* Books.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width:max-content;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+    /* margin-bottom: 5px; */
+}
+
+.input {
+}
+
+.button {
+    /* margin: 5px; */
+}
