@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../redux/store'
 import './Style.css';
+import EditForm from './EditForm';
 
 const Books: React.FC = (): JSX.Element => {
 
@@ -66,6 +67,7 @@ const Books: React.FC = (): JSX.Element => {
                 <p>Title: {book.title}</p>
                 <p>Author: {book.author}</p>
                 <p>Year: {book.year}</p>
+                <EditForm isbn={book.isbn} />
             </div>
             ))}
         </div>
